@@ -1,0 +1,159 @@
+/* CONNECTIONS */
+.connection-1fbD7X,
+.connectionHeader-2MDqhu {
+    background: transparent;
+}
+.connectionAccountLabel-1DiK0A {
+    color: hsla(0, 0%, 100%, .7);
+}
+.connectionDelete-2Odoln {
+    color: hsla(0, 0%, 100%, .7);
+}
+
+.connectionIcon-2ElzVe {
+    + div {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: .6;
+            border-radius: 8px 8px 0 0;
+            pointer-events: none;
+            z-index: -1;
+            background-color: #000;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 72px;
+            right: 0;
+            left: 0;
+            bottom: -64px;
+            opacity: .5;
+            border-radius: 0 0 8px 8px;
+            pointer-events: none;
+            z-index: -1;
+            background-color: #000;
+        }
+    }
+    
+    // Twitch
+    &[alt*="Twitch"] {
+        + div {
+            &:before,
+            &:after {
+                background-color: cv("const:colors.twitch-purple");
+            }
+        }
+    }
+
+    // YOUTUBE
+    &[alt*="Youtube"] {
+        + div {
+            &:before,
+            &:after {
+                background-color: #E5151A;
+            }
+        }
+    }
+
+    // BATTLE.NET
+    &[alt*="Battle.net"] {
+        + div {
+            &:before,
+            &:after  {
+                background-color: #0566b0;
+            }
+        }
+    }
+
+    // STEAM
+    &[alt*="Steam"] {
+        + div {
+            &:before,
+            &:after {
+                background-color: #212121;
+            }
+        }
+    }
+
+    // REDDIT
+    &[alt*="Reddit"]{
+        + div {
+            &:before,
+            &:after {
+                background-color: #FF5900;
+            }
+        }
+    }
+
+    // FACEBOOK
+    &[alt*="Facebook"]{
+        + div {
+            &:before,
+            &:after {
+                background-color: cv("const:colors.facebook-blue");
+            }
+            &:after {
+                bottom: -108px;
+            }
+        }
+    }
+
+    // TWITTER
+    &[alt*="Twitter"]{
+        + div {
+            &:before,
+            &:after {
+                background-color: #33AEFA;
+            }
+        }
+    }
+
+    // SPOTIFY
+    &[alt*="Spotify"]{
+        + div {
+            &:before,
+            &:after {
+                background-color: cv("const:colors.spotify-green");
+            }
+            &:after {
+                bottom: -108px;
+            }
+        }
+    }
+
+    // XBOX LIVE
+    &[alt*="Xbox Live"] {
+        + div {
+            &:before,
+            &:after {
+                background-color: cv("const:colors.xbox-green");
+            }
+            &:after {
+                bottom: -108px;
+            }
+        }
+    }
+
+    // GITHUB
+    &[alt*="GitHub"] {
+        + div {
+            &:before,
+            &:after {
+                background-color: #333;
+            }
+        }
+    }
+}
+
+.integrationsWrapper-VkM_zO {
+    background-color: cv("const:colors.twitch-purple");
+    border-radius: 0 0 8px 8px;
+}
+.integration-3kMeY4  {
+    background-color: cv("const:colors.twitch-purple");
+}

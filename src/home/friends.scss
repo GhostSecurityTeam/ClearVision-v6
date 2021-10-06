@@ -1,0 +1,143 @@
+/* FRIENDS */
+%themeDark {
+	%friends {
+		background-color: transparent;
+	}
+}
+
+// FRIENDS COLUMN
+%friendsColumn {
+	background: rgba(0, 0, 0, calc(var(--background-shading) * .4));
+}
+%friendsItem {
+	&:hover,
+	&%friendsItemActive {
+		background-color: hsla(0, 0%, 100%, .05);
+	}	
+}
+
+
+%friendActivity {
+	color: hsla(0, 0%, 100%, .5);
+	strong {
+		color: $main-color;
+	}
+}
+
+// ACTION BUTTON 
+%friendActionButton {
+	background-color: hsla(0, 0, 0, 0.6);
+	color: #fff;
+	&%friendActionButtonSelected,
+	&:hover {
+		background-color: $hover-color;
+		color: #fff;
+	}
+}
+
+%friendActionButton {
+	&%friendActionAcceptButton {
+		color: cv("colors.success");
+		&:hover {
+			background-color: cv("colors.success");
+			color: #fff !important;
+		}
+	}
+	&%friendActionDenyButton {
+		color: cv("colors.danger");
+		&:hover {
+			background-color: cv("colors.danger");
+			color: #fff !important;
+		}
+	}
+}
+
+
+// ADD FRIENDS BUTTON
+%tabBarItem[style*="background-color: rgb(67, 181, 129)"] {
+	background-color: cv("colors.success") !important;
+	color: #fff !important;
+}
+%tabBarItem[style*="background-color: rgba(67, 181, 129, 0.2)"] {
+	background-color: transparent !important;
+	color: cv("colors.success") !important;
+	box-shadow: 0 0 0 1px var(--success-color) inset;
+}
+%tabBarItem[style*="background-color: rgba(67, 181, 129, 0.2)"]:before {
+	content: "";
+	position: absolute;
+	background-color: var(--success-color);
+	opacity: 0.2;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+// ADD FRIENDS PAGE
+%friendsAddFriendInputWrapper {
+	background-color: hsla(0, 0%, 100%, .07);
+	box-shadow: 0 0 2px 2px rgba(255,255,255,0.12);
+	border: none;
+}
+%friendsAddFriendInput {
+	&::placeholder {
+		color: hsla(0, 0%, 100%, .3);
+	}
+	+ %friendsAddFriendHint {
+		&:after {
+			content: "";
+			position: fixed;
+			@include stretch;
+			border-radius: 8px;
+			transition: all .15s ease-in-out;
+			pointer-events: none;
+		}
+	}	
+	&:focus + %friendsAddFriendHint {
+		&:after {
+			box-shadow: 0 0 2px 2px $main-color;
+		}
+	}
+}
+%friendsAddFriendHint {
+	color: hsla(0, 0%, 100%, .3);
+}
+
+// Active Now voice channel overflow count
+.theme-dark .partyMemberOverflow-lXnzvu {
+	background-color: var(--background-overlay);
+}
+
+
+.nowPlayingColumn-2sl4cE {
+	background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.6))
+}
+
+.consentCard-1iSxB_ {
+	background-color: hsla(0, 0%, 0%, .4);
+}
+
+// ACTIVE NOW
+%themeDark {
+	.outer-1AjyKL {
+		background-color: hsla(0, 0%, 0%, .4);
+		&.interactive-3B9GmY:hover,
+		&.active-1xchHY {
+			background-color: hsla(0, 0%, 0%, .6);
+		}
+	}
+	.inset-3sAvek {
+		background-color: hsla(0, 0%, 0%, .4);
+	}
+}
+
+
+.theme-dark {	
+	.popout-38lTFE {
+		background-color: hsla(0, 0%, 0%, .8);
+	}
+	.enabled-1t_Gxm:hover,
+	.memberListItem-31QoHj:not(.popoutDisabled-2RK7MF):hover {
+		background-color: hsla(0, 0%, 100%, .05);
+	}
+}
